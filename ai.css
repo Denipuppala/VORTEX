@@ -1,0 +1,143 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #18255c;
+    color: #fff;
+}
+
+header {
+    background-color: #18255c; /* Dark blue header */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 31, 63, 0.7), rgba(0, 31, 63, 0.7)), url('https://img.freepik.com/free-photo/futuristic-metaverse-empty-room-product-display-presentation-abstract-technology-scifi-with-neon-light-3d-background_56104-2314.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.movie-list {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.movies {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.movie-container {
+    position: relative;
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.movie-image {
+    width: 100%; /* Ensure the image takes full width */
+    transition: transform 0.5s; /* Smooth transition for flipping */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+.movie-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for text */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s; /* Smooth transition for appearing */
+    border-radius: 8px; /* Match the image corners */
+}
+
+.movie-container:hover .movie-image {
+    transform: rotateY(180deg); /* Flip the image */
+}
+
+.movie-container:hover .movie-description {
+    opacity: 1; /* Show description on hover */
+}
+
+.premium-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.premium-blocks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.premium-block {
+    background-color: #001f3f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 200px;
+}
+
+.price {
+    font-size: 20px;
+    color: #ffd700; /* Gold color for prices */
+}
+
+button {
+    background-color: #ff4136; /* Red button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #001f3f;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media img {
+    margin: 0 5px;
+}
